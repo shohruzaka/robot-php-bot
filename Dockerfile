@@ -7,7 +7,8 @@ RUN apt-get update && apt-get install -y \
     git \
     unzip \
     && docker-php-ext-install pdo_mysql
-
+# Composer o'rnatish
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 # Ishchi katalog
 WORKDIR /app
 
