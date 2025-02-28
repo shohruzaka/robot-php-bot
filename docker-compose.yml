@@ -1,0 +1,9 @@
+services:
+  telegram-bot:
+    build: .
+    container_name: dotsent-bot
+    ports:
+      - "80:80" # Webhook uchun port
+    volumes:
+      - .:/app # Loyiha fayllarini konteynerga ulash
+    restart: always
