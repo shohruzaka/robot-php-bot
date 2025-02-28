@@ -21,6 +21,14 @@ class Bot {
         
         file_get_contents($this->api_url . "sendMessage?" . http_build_query($params));
     }
+
+    public function printContent() {
+        $content = $this->getUpdates();
+        echo "<pre>";
+        print_r($content);
+        echo "</pre>";
+    }
+
 }
 
 
